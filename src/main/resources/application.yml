@@ -6,7 +6,15 @@ spring:
     username: root
     password: 1234
     driver-class-name: com.mysql.jdbc.Driver
-  #¹«¹²ÅäÖÃÓëprofilesÑ¡ÔñÎŞ¹Ø
+  http:
+    encoding:
+      charset: utf-8
+  freemarker:
+    suffix: .html
+    charset: UTF-8
+    #è®¾å®šé™æ€æ–‡ä»¶è·¯å¾„ï¼Œjs,cssç­‰
+  mvc:
+    static-path-pattern: /static/**
 mybatis:
   typeAliasesPackage: com.example.entity
   mapperLocations: classpath:mapper/*.xml
@@ -15,3 +23,5 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: countSql
+
+
